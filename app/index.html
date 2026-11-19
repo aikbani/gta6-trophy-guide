@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Atlas — GTA VI Trophy Guide &amp; Tracker: 55 trophies, cited guides, platinum roadmap, missable alerts</title>
+<meta name="description" content="The complete offline GTA VI trophy guide and tracker: all 55 official PlayStation 5 trophies with cited guides, a platinum roadmap, missable alerts and a spoiler-safe checklist. No network needed.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">GRAND THEFT AUTO VI &middot; PLAYSTATION 5 &middot; OFFLINE GUIDE &amp; TRACKER</p>
+    <h1>Leonida <span class="neon">Platinum</span> Atlas</h1>
+    <p class="sub">All <strong>55 official trophies</strong> — <strong>1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze</strong> — with a guide for each, a platinum roadmap, missable alerts and a spoiler-safe checklist. <strong>28 hidden</strong> trophies stay hidden until you earn them or switch spoilers off. No account, no network, no ads: your progress lives in this browser only.</p>
+    <div class="statbar" id="statbar">
+      <div class="stat"><span class="stat-num" id="statEarned">0</span><span class="stat-lab">earned of 55</span></div>
+      <div class="stat"><span class="stat-num" id="statPct">0%</span><span class="stat-lab">complete</span></div>
+      <div class="stat"><span class="stat-num" id="statPts">0</span><span class="stat-lab">PSN points of 1,230</span></div>
+      <div class="stat"><span class="stat-num" id="statMiss">3</span><span class="stat-lab">to watch: 1 possible missable + 2 partner-gated</span></div>
+      <div class="stat"><span class="stat-num">~200 h</span><span class="stat-lab">early Platinum estimate &middot; difficulty 4/10</span></div>
+    </div>
+    <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div><p class="progress-lab" id="progressLab">0 of 55 earned — 55 to go to Vice Got a Price!</p></div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Guide sections">
+  <button class="tab active" data-view="checklist" type="button">Checklist</button>
+  <button class="tab" data-view="roadmap" type="button">Platinum Roadmap</button>
+  <button class="tab" data-view="missables" type="button">Missables <span class="badge-warn">3 to watch</span></button>
+  <button class="tab" data-view="sources" type="button">Sources &amp; Method</button>
+</nav>
+
+<section class="controls" id="controls">
+  <label class="search-lab">Search <input id="search" type="search" placeholder="trophy, mission, character… e.g. meditation, bank vault, Cal" autocomplete="off"></label>
+  <label>Kind <select id="kind"><option value="all">All kinds</option><option value="story">Story (12)</option><option value="stranger">Strangers (7)</option><option value="activity">Activities (9)</option><option value="combat">Combat (1)</option><option value="collectible">Collectibles (4)</option><option value="crime">Crime &amp; robberies (8)</option><option value="money">Money (4)</option><option value="misc">Secret &amp; misc (8)</option><option value="platinum">Platinum (1)</option><option value="completion">100% (1)</option></select></label>
+  <label>Grade <select id="grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+  <label>Status <select id="status"><option value="all">All</option><option value="earned">Earned</option><option value="remaining">Still to earn</option><option value="missable">Missable / caution</option><option value="hidden">Hidden trophies</option></select></label>
+  <label class="spoiler-lab"><input id="spoilers" type="checkbox"> Show story spoilers <span class="hint">(off = hidden trophies stay hidden until earned)</span></label>
+  <div class="save-btns">
+    <button id="exportBtn" type="button">Export progress (JSON)</button>
+    <label class="import-lab">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button" class="danger">Reset</button>
+  </div>
+</section>
+
+<main>
+  <section id="view-checklist" class="view active">
+    <p class="view-intro" id="listIntro">Tick a trophy when it pops — it stays ticked in this browser. Click a card to open its full guide, sources and your own note. <strong>Guides are this guide's own words</strong>, built from the official description and the PSN target; where a place or step is not pinned down, the guide says so instead of inventing one.</p>
+    <p class="count-line" id="countLine"></p>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters. Clear the search or widen the filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <p class="view-intro">The road to <strong>Vice Got a Price!</strong> in six phases. Do them in order: story first, then strangers, then activities, then crime and money, then collectibles and cleanup. Each phase shows its trophies and how many you have earned in it.</p>
+    <div id="roadmap"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <p class="view-intro"><strong>No trophy is confirmed missable by every source.</strong> One is flagged as possibly missable, two more need your partner beside you. The honest position, with the disagreement stated, is below — plus the save habit that protects you against all three.</p>
+    <div class="save-callout"><strong>Save habit:</strong> several guides report there is <strong>no mission replay</strong>. Keep a manual save at the start of every chapter and one before the final mission. That is the whole insurance policy.</div>
+    <div id="missableList"></div>
+    <h2>Why only one possible missable?</h2>
+    <p>GTABase and PowerPyx (via EGamers, 18 Nov 2026) flag <strong>Positive Mental Attitude</strong> as possibly missable: one meditation spot is reported to be available only in Chapter 1. PlanetGTA6 (18 Nov 2026) says it cannot be told yet — the game is a day old and no reliable missable list exists. This guide flags it as <strong>possible</strong>, says who says what, and tells you to meditate at every spot as you find it. The two partner trophies are not missable in the strict sense, but they need your partner available, so they are flagged as a caution and put in phase 2 of the roadmap. Everything else — chapters, missions, counts, collectibles — can be finished after the story.</p>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources</h2>
+    <ul class="src-list">
+      <li><strong>Names, descriptions, grades</strong> — Exophase, “Grand Theft Auto VI Trophies — PS5”, checked 19 Nov 2026; cross-checked name-for-name against PSNProfiles, checked 19 Nov 2026. The two agree on every name, description and grade.</li>
+      <li><strong>PSN progress targets &amp; rarity</strong> — PSNProfiles trophy list, 19 Nov 2026. Rarity % is a launch-day snapshot; it moves fast in week one.</li>
+      <li><strong>Hidden split &amp; Xbox Gamerscore</strong> — PlanetGTA6, “GTA 6 Trophies”, 18 Nov 2026: 27 visible / 28 hidden, Gamerscore per achievement (total 1,000G).</li>
+      <li><strong>Missable flag</strong> — GTABase / PowerPyx via EGamers (18 Nov 2026) vs PlanetGTA6 “cannot be told yet” (18 Nov 2026). Disagreement stated on the trophy itself.</li>
+      <li><strong>Cheats disable trophies</strong> — reported by PowerPyx; Rockstar confirmed the same rule for GTA V.</li>
+    </ul>
+    <h2>Method — what this guide will and will not claim</h2>
+    <ul class="src-list">
+      <li>Every guide is written in this guide's own words from the official description and the PSN target. No text is copied from any other guide site, wiki, video or forum post. Citing a source is allowed; copying it is not.</li>
+      <li>Where the official text does not pin down a place or a step (the cocktail bar, the showroom, the five cryptic trophies), the guide says so plainly instead of inventing a location.</li>
+      <li>Five trophies have no confirmed trigger at launch (Challenging Tank, Personal Best, Bad Luck I Guess, The Truth Is Out There, plus the cocktail and showroom spots). They are marked “trigger unconfirmed at launch” on their own cards.</li>
+      <li>No Rockstar logo or official artwork is used anywhere in this app. All visuals are original CSS.</li>
+      <li>Everything runs offline from these files. The app makes no network requests at all — no fonts, no images, no analytics.</li>
+    </ul>
+    <h2>Numbers at a glance</h2>
+    <p>55 trophies: 1 Platinum (180 PSN points), 2 Gold (90 each), 6 Silver (30 each), 46 Bronze (15 each) — 1,230 PSN points in total. 28 hidden, 27 visible. 20 trophies carry a PSN progress target (counts from 3 to 500, and $250,000). No online trophies, no difficulty trophies, no mission medals. Early community estimate for the Platinum: about 200 hours, difficulty 4/10.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum Atlas — an unofficial, free, open-source GTA VI trophy guide &amp; tracker. Not affiliated with Rockstar Games, Sony or PlayStation. Trophy names, descriptions and grades are the official PlayStation 5 list as published by Exophase and PSNProfiles, 18–19 Nov 2026. MIT licensed. Works offline from its own files.</p>
+  <p class="foot-small">Tip: press <kbd>?</kbd> anywhere to jump to search. Your checklist, notes and spoiler setting are stored only in this browser (localStorage) and can be exported as JSON.</p>
+</footer>
+
+<div class="detail" id="detail" hidden>
+  <div class="detail-backdrop" id="detailBackdrop"></div>
+  <article class="detail-card" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <button class="detail-close" id="detailClose" type="button" aria-label="Close">✕</button>
+    <div id="detailBody"></div>
+  </article>
+</div>
+
+<script src="data/trophies.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
